@@ -1,23 +1,26 @@
 //Developer -- Carlos Burgos
+//Forma de resolver 1
 const int led_verde = 11;
 const int led_rojo = 12;
 const int led_amarillo = 13;
 
 void setup(){
   pinMode(led_rojo,OUTPUT);
+  pinMode(led_verde,OUTPUT);
+  pinMode(led_amarillo,OUTPUT);
   Serial.begin(9600);// Baudios.
   
      //Menu de la Terminal
     Serial.println(":::MENU:::");
   	Serial.println("-----------------------------------");
-    Serial.println("[1]. Encender o apagar luz verde");
+    Serial.println("[1]. Encender luz verde");
     Serial.println("[2]. Apagar luz verde");
-    Serial.println("[3]. Encerder o apagar luz roja");
+    Serial.println("[3]. Encerder luz roja");
   	Serial.println("[4]. Apagar luz roja");
-  	Serial.println("[5]. Encerder o apagar luz amarilla");
+  	Serial.println("[5]. Encerder luz amarilla");
   	Serial.println("[6]. Apagar luz amarilla");
   	Serial.println("[7]. Encerder todas las luces");
-	Serial.println("[8]. Apagar todas las luces");
+	  Serial.println("[8]. Apagar todas las luces");
   	Serial.println("[9]. Poner luces en intermitente");
     Serial.println(":::Please, press your option.:::");
   	Serial.println("-----------------------------------");
@@ -106,19 +109,8 @@ void loop(){
 }  
 
   
-   /*if(Serial.available() > 0){
-     char opt = Serial.read();
-     if(opt == '1'){
-     	digitalWrite(led_rojo, HIGH);
-       Serial.print("opcion: 1");
-       Serial.println(" El led rojo se a prendido");
-       
-     }else if(opt == '0'){
-     	digitalWrite(led_rojo, LOW);
-       Serial.println("Led Rojo ha sido apagado");
-     }else {
-      Serial.println("Ingrese una opción valida");
-     }
-   }
+   /*
+   // cuando se prende con un caso y se lo apaga con el mismo caso
+
    */
   
